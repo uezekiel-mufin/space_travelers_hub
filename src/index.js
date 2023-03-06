@@ -5,9 +5,9 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import Navbar from './Navbar';
-import MyProfile from './components/Views/MyProfile';
-import Missions from './components/Views/Missions';
-import Rockets from './components/Views/Rockets';
+import MyProfile from './components/MyProfile';
+import Missions from './components/Missions';
+import Rockets from './components/Rockets';
 
 const router = createBrowserRouter([
   {
@@ -19,15 +19,15 @@ const router = createBrowserRouter([
         element: <App />,
       },
       {
-        path: '/my-profile',
+        path: 'my-profile',
         element: <MyProfile />,
       },
       {
-        path: '/my-profile',
+        path: 'missions',
         element: <Missions />,
       },
       {
-        path: '/my-profile',
+        path: '/rockets',
         element: <Rockets />,
       },
     ],
