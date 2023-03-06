@@ -1,8 +1,24 @@
 /* eslint-disable import/no-extraneous-dependencies */
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
+  const location = useLocation();
+  console.log(location);
+  const [mainUrl, setMainUrl] = useState('1');
+
+  useEffect(() => {
+    if (location.pathname === '/my-profile') {
+      setMainUrl('My Profile');
+    }
+    if (location.pathname === '/missions') {
+      setMainUrl('Missions');
+    }
+    if (location.pathname === '/') {
+      setMainUrl('Rockets');
+    }
+  }, [location]);
+
   const navLinks = [
     {
       id: 1,
@@ -20,6 +36,7 @@ const Navbar = () => {
       link: 'my-profile',
     },
   ];
+
   return (
     <header>
       <div>
@@ -28,7 +45,11 @@ const Navbar = () => {
       </div>
       <div>
         {navLinks.map((link) => (
-          <Link to={link.link} key={link.id}>
+          <Link
+            to={link.link}
+            key={link.id}
+            style={{ textDecoration: `${(link.name === mainUrl) ? 'underline' : 'none'}` }}
+          >
             {link.name}
           </Link>
         ))}
