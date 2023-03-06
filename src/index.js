@@ -3,7 +3,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css';
-import App from './App';
 import Navbar from './Navbar';
 import MyProfile from './components/MyProfile';
 import Missions from './components/Missions';
@@ -15,10 +14,6 @@ const router = createBrowserRouter([
     element: <Navbar />,
     children: [
       {
-        path: '/',
-        element: <App />,
-      },
-      {
         path: 'my-profile',
         element: <MyProfile />,
       },
@@ -27,7 +22,7 @@ const router = createBrowserRouter([
         element: <Missions />,
       },
       {
-        path: '/rockets',
+        path: '/',
         element: <Rockets />,
       },
     ],
