@@ -1,10 +1,9 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const location = useLocation();
-  console.log(location);
   const [mainUrl, setMainUrl] = useState('1');
 
   useEffect(() => {
@@ -45,13 +44,13 @@ const Navbar = () => {
       </div>
       <div>
         {navLinks.map((link) => (
-          <Link
+          <NavLink
             to={link.link}
             key={link.id}
             style={{ textDecoration: `${(link.name === mainUrl) ? 'underline' : 'none'}` }}
           >
             {link.name}
-          </Link>
+          </NavLink>
         ))}
       </div>
     </header>
