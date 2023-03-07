@@ -27,7 +27,15 @@ const Rocket = ({ rocket }) => {
       </div>
       <div className="md:col-span-4 flex flex-col gap-2 items-start">
         <h2 className="font-bold m-0 text-xl">{rocket.name}</h2>
-        <p>{rocket.description}</p>
+        <p>
+          {rocket.reserved === true && (
+            <span className="mr-3 bg-blue-500 text-white px-2 rounded-md text-center">
+              Reserved
+            </span>
+          )}
+          {rocket.description}
+        </p>
+
         <button
           type="button"
           className={` px-4 py-2 rounded-md text-white ${
