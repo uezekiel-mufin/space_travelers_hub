@@ -1,37 +1,15 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { Provider } from 'react-redux';
 import './index.css';
-import Navbar from './Navbar';
-import MyProfile from './components/Views/MyProfile';
-import Missions from './components/Views/Missions';
-import Rockets from './components/Views/Rockets';
-
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <Navbar />,
-    children: [
-      {
-        path: 'my-profile',
-        element: <MyProfile />,
-      },
-      {
-        path: '/missions',
-        element: <Missions />,
-      },
-      {
-        path: 'rockets',
-        element: <Rockets />,
-      },
-    ],
-  },
-]);
+import store from './redux/store';
+import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>,
 );

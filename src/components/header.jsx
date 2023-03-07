@@ -1,6 +1,5 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation, NavLink } from 'react-router-dom';
 
 const Header = () => {
   const location = useLocation();
@@ -22,7 +21,7 @@ const Header = () => {
     {
       id: 1,
       name: 'Rockets',
-      link: '/rockets',
+      link: '/',
     },
     {
       id: 2,
@@ -38,24 +37,19 @@ const Header = () => {
 
   return (
     <header>
-      <div className="bg-red-500 text-[#666] shadow-xl shadow-blue-500 w-full md:bg-yellow-500 lg:bg-green-500 md:w-[89%]">
+      <div>
         <img src="" alt="" />
-        <h2 className="text-lg md:text-2xl lg:text-4xl animate-bounce font-bold italic">
-          Space Traveler&apos;s Hub
-        </h2>
-        <h3 className="another">Another element</h3>
+        <h2>Space Traveler&apos;s Hub</h2>
       </div>
       <div>
         {navLinks.map((link) => (
-          <Link
+          <NavLink
             to={link.link}
             key={link.id}
-            style={{
-              textDecoration: `${link.name === mainUrl ? 'underline' : 'none'}`,
-            }}
+            style={{ textDecoration: `${(link.name === mainUrl) ? 'underline' : 'none'}` }}
           >
             {link.name}
-          </Link>
+          </NavLink>
         ))}
       </div>
     </header>
