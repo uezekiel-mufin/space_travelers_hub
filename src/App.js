@@ -1,10 +1,10 @@
 import {
   Routes, Route, BrowserRouter,
 } from 'react-router-dom';
-import Rockets from './components/Rockets';
+import Rockets from './components/Views/Rockets';
 import Navbar from './Navbar';
-import MyProfile from './components/MyProfile';
-import Missions from './components/Missions';
+import MyProfile from './components/Views/MyProfile';
+import Missions from './components/Views/Missions';
 
 const App = () => (
   <div>

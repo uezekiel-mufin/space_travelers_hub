@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import asyncMission from '../redux/api/apiSlice';
+import asyncMission from '../../redux/slices/api/apiSlice';
 
 const Missions = () => {
   const dispatch = useDispatch();

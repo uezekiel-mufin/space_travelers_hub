@@ -1,5 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { loadMission } from '../rocket/rucketSlice';
+import { loadMission } from '../missionSlice/missionSlice';
 
 const LOAD_MISSION = 'LOADMISSION';
 const missionUrl = 'https://api.spacexdata.com/v3/missions';
