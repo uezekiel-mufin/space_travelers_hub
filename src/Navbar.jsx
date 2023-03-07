@@ -1,6 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React, { useState, useEffect } from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink, useLocation, Outlet } from 'react-router-dom';
 
 const Navbar = () => {
   const location = useLocation();
@@ -37,23 +37,26 @@ const Navbar = () => {
   ];
 
   return (
-    <header>
-      <div>
-        <img src="" alt="" />
-        <h2>Space Traveler&apos;s Hub</h2>
-      </div>
-      <div>
-        {navLinks.map((link) => (
-          <NavLink
-            to={link.link}
-            key={link.id}
-            style={{ textDecoration: `${(link.name === mainUrl) ? 'underline' : 'none'}` }}
-          >
-            {link.name}
-          </NavLink>
-        ))}
-      </div>
-    </header>
+    <>
+      <header>
+        <div>
+          <img src="" alt="" />
+          <h2>Space Traveler&apos;s Hub</h2>
+        </div>
+        <div>
+          {navLinks.map((link) => (
+            <NavLink
+              to={link.link}
+              key={link.id}
+              style={{ textDecoration: `${(link.name === mainUrl) ? 'underline' : 'none'}` }}
+            >
+              {link.name}
+            </NavLink>
+          ))}
+        </div>
+      </header>
+      <Outlet />
+    </>
   );
 };
 

@@ -2,8 +2,7 @@ import React from 'react';
 
 const Rockets = () => (
   <div>
-    Rockets Rockets Rockets Rockets Rockets Rockets Rockets Rockets Rockets
-    Rockets Rockets Rockets Rockets Rockets Rockets
+    Hey
   </div>
 );
 
