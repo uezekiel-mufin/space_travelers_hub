@@ -23,18 +23,21 @@ const rocketSlice = createSlice({
   extraReducers: (builder) => {
     builder.addCase(fetchRockets.fulfilled, (state, action) => {
       const rockets = action.payload;
+      console.log(rockets);
       const newRockets = rockets.map((rocket) => {
         const {
           flickr_images: flickrImages,
           rocket_id: rocketId,
           rocket_name: rocketName,
           rocket_type: rocketType,
+          description,
         } = rocket;
         return {
           id: rocketId,
           name: rocketName,
           type: rocketType,
           flickr_images: flickrImages,
+          description,
         };
       });
       const newState = { ...state };
