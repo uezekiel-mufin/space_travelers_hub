@@ -4,7 +4,6 @@ import { Link, useLocation } from 'react-router-dom';
 
 const Header = () => {
   const location = useLocation();
-  console.log(location);
   const [mainUrl, setMainUrl] = useState('1');
 
   useEffect(() => {
@@ -39,9 +38,12 @@ const Header = () => {
 
   return (
     <header>
-      <div>
+      <div className="bg-red-500 text-[#666] shadow-xl shadow-blue-500 w-full md:bg-yellow-500 lg:bg-green-500 md:w-[89%]">
         <img src="" alt="" />
-        <h2>Space Traveler&apos;s Hub</h2>
+        <h2 className="text-lg md:text-2xl lg:text-4xl animate-bounce font-bold italic">
+          Space Traveler&apos;s Hub
+        </h2>
+        <h3 className="another">Another element</h3>
       </div>
       <div>
         {navLinks.map((link) => (
