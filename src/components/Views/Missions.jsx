@@ -15,7 +15,7 @@ const Missions = () => {
 
   return (
     <>
-      <table className="table-auto mx-6">
+      <table className="static overflow-scroll table-auto mx-6">
         <thead>
           <tr>
             <th className="border px-4 py-2">Mission</th>
