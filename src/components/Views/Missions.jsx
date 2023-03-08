@@ -10,7 +10,6 @@ const Missions = () => {
   useEffect(() => {
     dispatch(asyncMission());
   }, [dispatch]);
-  console.log(missions);
   return (
     <>
       <table className="table-auto">
