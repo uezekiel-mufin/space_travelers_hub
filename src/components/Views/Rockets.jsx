@@ -7,10 +7,11 @@ const rocketsUrl = 'https://api.spacexdata.com/v3/rockets';
 const Rockets = () => {
   const dispatch = useDispatch();
   const rockets = useSelector((state) => state.rockets.rockets);
-
   useEffect(() => {
-    dispatch(fetchRockets(rocketsUrl));
-  }, [dispatch]);
+    if (rockets.length < 1) {
+      dispatch(fetchRockets(rocketsUrl));
+    }
+  }, [dispatch, rockets]);
   return (
     <main className="py-10">
       <section className="border-t px-4 md:px-20 pt-8 space-y-8 md:space-y-4">
