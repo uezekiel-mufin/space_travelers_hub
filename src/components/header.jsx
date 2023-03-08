@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, NavLink } from 'react-router-dom';
+import icon from '../img/icon.png';
 
 const Header = () => {
   const location = useLocation();
@@ -38,21 +39,24 @@ const Header = () => {
 
   return (
     <header>
-      <div>
-        <img src="" alt="" />
-        <h2>Space Traveler&apos;s Hub</h2>
+      <div className="ml-4 flex justify-between">
+        <div className="flex gap-x-2 text-gray-600">
+          <img src={icon} className="object-fill h-10 w-10" alt="" />
+          <h1 className="text-xl font-bold">Space Traveler&apos;s Hub</h1>
+        </div>
+        <div className="flex gap-x-4 text-blue-500">
+          {navLinks.map((link) => (
+            <NavLink
+              to={link.link}
+              key={link.id}
+              style={{ textDecoration: `${(link.name === mainUrl) ? 'underline' : 'none'}` }}
+            >
+              {link.name}
+            </NavLink>
+          ))}
+        </div>
       </div>
-      <div>
-        {navLinks.map((link) => (
-          <NavLink
-            to={link.link}
-            key={link.id}
-            style={{ textDecoration: `${(link.name === mainUrl) ? 'underline' : 'none'}` }}
-          >
-            {link.name}
-          </NavLink>
-        ))}
-      </div>
+      <hr className="h-px mb-3 bg-gray-200 border-0 dark:bg-gray-700" />
     </header>
   );
 };

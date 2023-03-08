@@ -15,7 +15,7 @@ const Missions = () => {
 
   return (
     <>
-      <table className="table-auto mt-10">
+      <table className="table-auto mx-6">
         <thead>
           <tr>
             <th className="border px-4 py-2">Mission</th>
