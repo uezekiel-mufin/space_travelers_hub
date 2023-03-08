@@ -2,7 +2,7 @@ import {
   Routes, Route, BrowserRouter,
 } from 'react-router-dom';
 import Rockets from './components/Views/Rockets';
-import Navbar from './Navbar';
+import Navbar from './components/Navbar';
 import MyProfile from './components/Views/MyProfile';
 import Missions from './components/Views/Missions';
 
