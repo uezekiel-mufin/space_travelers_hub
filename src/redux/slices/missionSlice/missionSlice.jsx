@@ -1,11 +1,22 @@
 const MISSION = 'MISSION';
-
+const JOIN_MISSION = 'JOIN_MISSION';
+const CANCEL_MISSION = 'CANCEL_MISSION';
 const initialState = {
   missions: [],
 };
 
 export const loadMission = (missions) => ({
   type: MISSION,
+  missions,
+});
+
+export const joinMission = (missions) => ({
+  type: JOIN_MISSION,
+  missions,
+});
+
+export const cancelMission = (missions) => ({
+  type: CANCEL_MISSION,
   missions,
 });
 
@@ -25,6 +36,26 @@ const missionReducer = (state = initialState, action) => {
       ...state,
       missions: tempMission,
     };
+  }
+
+  if (action.type === JOIN_MISSION) {
+    const newState = { ...state };
+    const newMissions = state.missions.map((mission) => {
+      if (mission.mission_id !== action.missions) return mission;
+      return { ...mission, reserved: true };
+    });
+    newState.missions = newMissions;
+    return newState;
+  }
+
+  if (action.type === CANCEL_MISSION) {
+    const newState = { ...state };
+    const newMissions = state.missions.map((mission) => {
+      if (mission.mission_id !== action.missions) return mission;
+      return { ...mission, reserved: false };
+    });
+    newState.missions = newMissions;
+    return newState;
   }
   return state;
 };

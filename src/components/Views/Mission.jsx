@@ -1,24 +1,51 @@
+// import { useState } from "react";
+import { useDispatch } from 'react-redux';
+import { joinMission, cancelMission } from '../../redux/slices/missionSlice/missionSlice';
+
 const Mission = (mission) => {
+  // const [mainUrl, setMainUrl] = useState('1');
   const {
+    reserved,
+    missionId,
     missionName,
     description,
   } = mission;
+
+  const dispatch = useDispatch();
+  const reserveclick = () => {
+    if (reserved === true) {
+      dispatch(cancelMission(missionId));
+    } else {
+      dispatch(joinMission(missionId));
+    }
+  };
   return (
-    <tr>
-      <td className="border px-4 py-2">{missionName}</td>
+    <tr className="odd:bg-[#eeeeee] even:bg-white">
+      <td className="border px-4 py-2 font-bold">{missionName}</td>
       <td className="border px-4 py-2">{description}</td>
-      <td className="border px-4 py-2">
+      <td className="border px-4 py-2 w-[8rem]">
         <button
+          className={`text-white rounded text-xs px-1 border-transparent ${
+            reserved === true
+              ? 'bg-[#2ba6b1] border-white-700 border text-white'
+              : 'bg-gray-500 text-white'
+          }`}
           type="button"
         >
-          NOT A MEMBER
+          {reserved === true ? 'Active Member' : 'NOT A MEMBER'}
         </button>
       </td>
-      <td className="border px-4 py-2">
+      <td className="border px-4 py-2 w-[9rem]">
         <button
           type="button"
+          className={`bg-transparent rounded text-xs py-1 px-3 border ${
+            reserved === true
+              ? 'bg-transparent border-red-400 border text-rose-500'
+              : 'bg-transparent text-gray-500 border-gray-500'
+          }`}
+          onClick={reserveclick}
         >
-          Join Mission
+          {reserved === true ? 'Leave Mission' : 'Join Mission'}
         </button>
       </td>
     </tr>

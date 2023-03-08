@@ -6,13 +6,15 @@ import Mission from './Mission';
 const Missions = () => {
   const dispatch = useDispatch();
   const { missions } = useSelector((state) => state.missions);
-
   useEffect(() => {
-    dispatch(asyncMission());
-  }, [dispatch]);
+    if (missions.length < 1) {
+      dispatch(asyncMission());
+    }
+  }, [dispatch, missions]);
+
   return (
     <>
-      <table className="table-auto">
+      <table className="table-auto mt-10">
         <thead>
           <tr>
             <th className="border px-4 py-2">Mission</th>
@@ -28,6 +30,7 @@ const Missions = () => {
               missionId={mission.mission_id}
               missionName={mission.mission_name}
               description={mission.description}
+              reserved={mission.reserved}
             />
           ))}
         </tbody>
