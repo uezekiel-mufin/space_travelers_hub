@@ -12,13 +12,11 @@ const Mission = (mission) => {
   } = mission;
   const dispatch = useDispatch();
   const reserveclick = () => {
-    console.log(`first${reserved}`);
     if (reserved === true) {
       dispatch(cancelMission(missionId));
     } else {
       dispatch(joinMission(missionId));
     }
-    console.log(`last${reserved}`);
   };
   return (
     <tr className="odd:bg-zinc-200 even:bg-white">
