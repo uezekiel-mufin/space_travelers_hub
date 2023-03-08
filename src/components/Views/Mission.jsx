@@ -1,9 +1,7 @@
-// import { useState } from "react";
 import { useDispatch } from 'react-redux';
 import { joinMission, cancelMission } from '../../redux/slices/missionSlice/missionSlice';
 
 const Mission = (mission) => {
-  // const [mainUrl, setMainUrl] = useState('1');
   const {
     reserved,
     missionId,
