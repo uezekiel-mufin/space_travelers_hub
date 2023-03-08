@@ -5,19 +5,23 @@ import { joinMission } from '../../redux/slices/missionSlice/missionSlice';
 const Mission = (mission) => {
   // const [mainUrl, setMainUrl] = useState('1');
   const {
+    reserved,
     missionId,
     missionName,
     description,
   } = mission;
   const dispatch = useDispatch();
-
   return (
     <tr className="odd:bg-zinc-200 even:bg-white">
       <td className="border px-4 py-2">{missionName}</td>
       <td className="border px-4 py-2">{description}</td>
       <td className="border px-4 py-2">
         <button
-          className="bg-gray-500 text-white rounded text-xs px-4 border"
+          className={`bg-gray-500 text-white rounded text-xs px-4 border ${
+            reserved === true
+              ? 'bg-teal-500 border-white-700 border text-white'
+              : 'bg-gray-500 text-white'
+          }`}
           type="button"
         >
           NOT A MEMBER
