@@ -40,7 +40,7 @@ const Header = () => {
   return (
     <header>
       <div className="ml-4 flex justify-between">
-        <div className="flex gap-x-2 text-gray-600">
+        <div className="flex gap-x-2 text-black">
           <img src={icon} className="object-fill h-10 w-10" alt="" />
           <h1 className="text-xl font-bold">Space Traveler&apos;s Hub</h1>
         </div>
@@ -51,12 +51,15 @@ const Header = () => {
               key={link.id}
               style={{ textDecoration: `${(link.name === mainUrl) ? 'underline' : 'none'}` }}
             >
+              <span className="text-gray-500 mr-4">
+                {link.name === 'My Profile' ? '|' : ''}
+              </span>
               {link.name}
             </NavLink>
           ))}
         </div>
       </div>
-      <hr className="h-px mb-3 bg-gray-200 border-0 dark:bg-gray-700" />
+      <hr className="h-px mt-3 mb-3 bg-gray-200 border-0 dark:bg-gray-700" />
     </header>
   );
 };

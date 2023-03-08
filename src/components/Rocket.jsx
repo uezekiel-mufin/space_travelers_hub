@@ -38,10 +38,10 @@ const Rocket = ({ rocket }) => {
 
         <button
           type="button"
-          className={` px-4 py-2 rounded-md text-white ${
+          className={` px-4 py-2 rounded-md text-gray-800 ${
             rocket.reserved
               ? 'bg-white border-gray-700 border text-gray-800'
-              : 'bg-blue-500'
+              : 'bg-blue-500 text-white'
           }`}
           onClick={(e) => handleReservation(e, rocket)}
         >
