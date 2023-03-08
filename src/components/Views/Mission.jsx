@@ -1,6 +1,6 @@
 // import { useState } from "react";
 import { useDispatch } from 'react-redux';
-import { joinMission } from '../../redux/slices/missionSlice/missionSlice';
+import { joinMission, cancelMission } from '../../redux/slices/missionSlice/missionSlice';
 
 const Mission = (mission) => {
   // const [mainUrl, setMainUrl] = useState('1');
@@ -11,6 +11,15 @@ const Mission = (mission) => {
     description,
   } = mission;
   const dispatch = useDispatch();
+  const reserveclick = () => {
+    console.log(`first${reserved}`);
+    if (reserved === true) {
+      dispatch(cancelMission(missionId));
+    } else {
+      dispatch(joinMission(missionId));
+    }
+    console.log(`last${reserved}`);
+  };
   return (
     <tr className="odd:bg-zinc-200 even:bg-white">
       <td className="border px-4 py-2">{missionName}</td>
@@ -24,14 +33,14 @@ const Mission = (mission) => {
           }`}
           type="button"
         >
-          NOT A MEMBER
+          {reserved === true ? 'Active Member' : 'NOT A MEMBER'}
         </button>
       </td>
       <td className="border px-4 py-2">
         <button
           type="button"
           className="bg-transparent text-black rounded text-xs py-1 px-5 border border-gray-400"
-          onClick={() => dispatch(joinMission(missionId))}
+          onClick={reserveclick}
         >
           Join Mission
         </button>
