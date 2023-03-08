@@ -10,6 +10,7 @@ const Mission = (mission) => {
     missionName,
     description,
   } = mission;
+
   const dispatch = useDispatch();
   const reserveclick = () => {
     if (reserved === true) {
@@ -19,14 +20,14 @@ const Mission = (mission) => {
     }
   };
   return (
-    <tr className="odd:bg-zinc-200 even:bg-white">
-      <td className="border px-4 py-2">{missionName}</td>
+    <tr className="odd:bg-[#eeeeee] even:bg-white">
+      <td className="border px-4 py-2 font-bold">{missionName}</td>
       <td className="border px-4 py-2">{description}</td>
-      <td className="border px-4 py-2">
+      <td className="border w-[6rem] py-2">
         <button
-          className={`bg-gray-500 text-white rounded text-xs px-4 border ${
+          className={`bg-gray-500  text-white rounded text-xs border-transparent ${
             reserved === true
-              ? 'bg-teal-500 border-white-700 border text-white'
+              ? 'bg-[#2ba6b1] border-white-700 border text-white'
               : 'bg-gray-500 text-white'
           }`}
           type="button"
@@ -34,13 +35,17 @@ const Mission = (mission) => {
           {reserved === true ? 'Active Member' : 'NOT A MEMBER'}
         </button>
       </td>
-      <td className="border px-4 py-2">
+      <td className="border py-2 w-[7rem]">
         <button
           type="button"
-          className="bg-transparent text-black rounded text-xs py-1 px-5 border border-gray-400"
+          className={`bg-transparent rounded text-xs py-1 px-3 border ${
+            reserved === true
+              ? 'bg-transparent border-red-400 border text-rose-500'
+              : 'bg-transparent text-gray-500 border-gray-500'
+          }`}
           onClick={reserveclick}
         >
-          Join Mission
+          {reserved === true ? 'Leave Mission' : 'Join Mission'}
         </button>
       </td>
     </tr>
