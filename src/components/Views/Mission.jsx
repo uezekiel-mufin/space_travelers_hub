@@ -1,5 +1,8 @@
 import { useDispatch } from 'react-redux';
-import { joinMission, cancelMission } from '../../redux/slices/missionSlice/missionSlice';
+import {
+  joinMission,
+  cancelMission,
+} from '../../redux/slices/missionSlice/missionSlice';
 
 const Mission = (mission) => {
   const {
@@ -20,7 +23,9 @@ const Mission = (mission) => {
   return (
     <tr className="odd:bg-[#eeeeee] even:bg-white">
       <td className="border px-4 py-2 font-bold">{missionName}</td>
-      <td className="border px-4 py-2">{description}</td>
+      <td className="border px-4 py-2 line-clamp-2 sm:line-clamp-3 md:line-clamp-5 lg:line-clamp-none w-full">
+        {description}
+      </td>
       <td className="border px-4 py-2 w-[8rem]">
         <button
           className={`text-white rounded text-xs px-1 border-transparent ${
