@@ -9,11 +9,12 @@ export const loadMission = (missions) => ({
   missions,
 });
 
-const rocketReducer = (state = initialState, action) => {
+const missionReducer = (state = initialState, action) => {
   if (action.type === MISSION) {
     const tempMission = [];
-    Object.entries(action.missions).forEach(([value]) => {
+    Object.entries(action.missions).forEach(([key, value]) => {
       tempMission.push({
+        id: key,
         mission_id: value.mission_id,
         mission_name: value.mission_name,
         description: value.description,
@@ -25,9 +26,7 @@ const rocketReducer = (state = initialState, action) => {
       missions: tempMission,
     };
   }
-  return {
-    ...state,
-  };
+  return state;
 };
 
-export default rocketReducer;
+export default missionReducer;

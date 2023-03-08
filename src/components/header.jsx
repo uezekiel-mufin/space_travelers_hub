@@ -3,7 +3,7 @@ import { useLocation, NavLink } from 'react-router-dom';
 
 const Header = () => {
   const location = useLocation();
-  
+
   const [mainUrl, setMainUrl] = useState('1');
 
   useEffect(() => {
