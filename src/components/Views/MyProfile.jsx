@@ -5,7 +5,6 @@ const MyProfile = () => {
   // const dispatch = useDispatch();
   const rockets = useSelector((state) => state.rockets.rockets);
   const { missions } = useSelector((state) => state.missions);
-
   return (
     <main className="grid md:grid-cols-2 gap-8 border-t py-10 px-4 md:px-16">
       <article>
