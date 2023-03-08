@@ -1,30 +1,18 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { useLocation, NavLink } from 'react-router-dom';
+/* eslint-disable operator-linebreak */
+/* eslint-disable import/no-extraneous-dependencies */
+import React from 'react';
+import { AiOutlineMenuFold } from 'react-icons/ai';
+import { useSelector, useDispatch } from 'react-redux';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import icon from '../img/icon.png';
+import { openMenu } from '../redux/slices/menu/menuSlice';
+import Sidebar from './Sidebar';
 
 const Header = () => {
   const location = useLocation();
-  const catMenu = useRef(null);
-  const [open, setOpen] = useState(false);
-  const [mainUrl, setMainUrl] = useState('1');
-  useEffect(() => {
-    if (location.pathname === '/my-profile') {
-      setMainUrl('My Profile');
-    }
-    if (location.pathname === '/missions') {
-      setMainUrl('Missions');
-    }
-    if (location.pathname === '/') {
-      setMainUrl('Rockets');
-    }
-  }, [location]);
-  const closeOpenMenus = (e) => {
-    if (catMenu.current && open && !catMenu.current.contains(e.target)) {
-      setOpen(false);
-    }
-  };
-
-  document.addEventListener('mousedown', closeOpenMenus);
+  const dispatch = useDispatch();
+  const menu = useSelector((state) => state.menu.menuBar);
+  // const [mainUrl, setMainUrl] = useState('Rockets');
 
   const navLinks = [
     {
@@ -44,12 +32,35 @@ const Header = () => {
     },
   ];
 
+  const handleLink = () => {
+    dispatch(openMenu());
+  };
+
+  const activeLink =
+    location.pathname === '/'
+      ? '/'
+      : location.pathname.split('').slice(1).join('');
+  console.log(activeLink);
   return (
-    <header className="w-full">
-      <div className="ml-4 flex justify-between content-center items-center p-5">
+    <header className="w-full border-b mb-4">
+      {menu && (
+        <div className="md:hidden animate-slide-in fixed z-100  h-full w-full bg-white transition-all ease-in-out duration-500 ">
+          <Sidebar links={navLinks} />
+        </div>
+      )}
+      <div className="md:ml-4 flex justify-between content-center items-center p-5">
         <div className="flex gap-x-2 text-black">
-          <img src={icon} className="object-fill h-10 w-10" alt="" />
-          <h1 className="text-xl font-bold">Space Traveler&apos;s Hub</h1>
+          <Link to="/">
+            <img
+              src={icon}
+              className="object-fill h-10 w-10"
+              alt="logo"
+              aria-hidden="true"
+            />
+          </Link>
+          <h1 className="text-xl hidden md:flex font-bold">
+            Space Traveler&apos;s Hub
+          </h1>
         </div>
 
         <div className="md:flex gap-x-4 text-blue-500 hidden">
@@ -57,7 +68,7 @@ const Header = () => {
             <NavLink
               to={link.link}
               key={link.id}
-              style={{ textDecoration: `${(link.name === mainUrl) ? 'underline' : 'none'}` }}
+              className={`${activeLink === link.link ? 'underline' : 'none'}`}
             >
               <span className="text-gray-500 mr-4">
                 {link.name === 'My Profile' ? '|' : ''}
@@ -69,46 +80,15 @@ const Header = () => {
 
         {/* Hamburger button */}
         <div className="text-blue-500 md:hidden m-0">
-          {!open
-            && (
-            <button
-              type="button"
-              className="p-3 space-y-2 bg-gray-600 rounded shadow"
-              onClick={() => setOpen((prevCheck) => !prevCheck)}
-            >
-              <span className="block w-8 h-0.5 bg-gray-100 animate-pulse" />
-              <span className="block w-8 h-0.5 bg-gray-100 animate-pulse" />
-              <span className="block w-8 h-0.5 bg-gray-100 animate-pulse" />
-            </button>
-            )}
+          <button
+            type="button"
+            className=" space-y-2 rounded shadow"
+            onClick={() => handleLink()}
+          >
+            <AiOutlineMenuFold className="w-8 h-8" />
+          </button>
         </div>
-
       </div>
-      <hr className="h-px w-full mt-3 mb-3 bg-gray-200 border-0 dark:bg-gray-700" />
-      {open
-          && (
-          <div ref={catMenu} className="h-full flex items-center flex-col bottom-0 w-[6rem] left-0 absolute text-white bg-black md:hidden">
-            <button
-              type="button"
-              onClick={() => setOpen((prevCheck) => !prevCheck)}
-              className="ml-12"
-            >
-              x
-            </button>
-            <div className="flex flex-col">
-              {navLinks.map((link) => (
-                <NavLink
-                  to={link.link}
-                  key={link.id}
-                  style={{ textDecoration: `${(link.name === mainUrl) ? 'underline' : 'none'}` }}
-                >
-                  {link.name}
-                </NavLink>
-              ))}
-            </div>
-          </div>
-          )}
-
     </header>
   );
 };
