@@ -13,8 +13,8 @@ const Rockets = () => {
     }
   }, [dispatch, rockets]);
   return (
-    <main className="py-10">
-      <section className="border-t px-4 md:px-20 pt-8 space-y-8 md:space-y-4">
+    <main className="pb-10">
+      <section className="px-4 md:px-20 pt-8 space-y-8 md:space-y-4">
         {rockets.map((rocket) => (
           <Rocket key={rocket.id} rocket={rocket} />
         ))}

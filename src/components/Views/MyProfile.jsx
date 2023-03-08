@@ -6,7 +6,7 @@ const MyProfile = () => {
   const rockets = useSelector((state) => state.rockets.rockets);
   const { missions } = useSelector((state) => state.missions);
   return (
-    <main className="grid md:grid-cols-2 gap-8 border-t py-10 px-4 md:px-16">
+    <main className="grid md:grid-cols-2 gap-8 py-10 px-4 md:px-16">
       <article>
         <h2 className="text-[2rem] font-semibold mb-2 ">My Mission</h2>
         <section className="border border-[#121212]">

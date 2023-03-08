@@ -14,8 +14,8 @@ const Missions = () => {
   }, [dispatch, missions]);
 
   return (
-    <>
-      <table className="table-auto mt-10">
+    <main className="overflow-scroll">
+      <table className="static table-auto mx-6">
         <thead>
           <tr>
             <th className="border px-4 py-2">Mission</th>
@@ -36,7 +36,7 @@ const Missions = () => {
           ))}
         </tbody>
       </table>
-    </>
+    </main>
   );
 };
 export default Missions;
