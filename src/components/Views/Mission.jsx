@@ -23,9 +23,9 @@ const Mission = (mission) => {
     <tr className="odd:bg-[#eeeeee] even:bg-white">
       <td className="border px-4 py-2 font-bold">{missionName}</td>
       <td className="border px-4 py-2">{description}</td>
-      <td className="border px-4 py-2 w-[7.5rem]">
+      <td className="border px-4 py-2 w-[8rem]">
         <button
-          className={`bg-gray-500  text-white rounded text-xs border-transparent ${
+          className={`text-white rounded text-xs px-1 border-transparent ${
             reserved === true
               ? 'bg-[#2ba6b1] border-white-700 border text-white'
               : 'bg-gray-500 text-white'
