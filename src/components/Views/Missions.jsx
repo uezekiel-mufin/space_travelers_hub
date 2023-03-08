@@ -15,27 +15,29 @@ const Missions = () => {
 
   return (
     <>
-      <table className="static overflow-scroll table-auto mx-6">
-        <thead>
-          <tr>
-            <th className="border px-4 py-2">Mission</th>
-            <th className="border px-4 py-2">Description</th>
-            <th className="border px-4 py-2">Status</th>
-            <th className="border px-4 py-2"> </th>
-          </tr>
-        </thead>
-        <tbody>
-          {missions.map((mission) => (
-            <Mission
-              key={mission.mission_id}
-              missionId={mission.mission_id}
-              missionName={mission.mission_name}
-              description={mission.description}
-              reserved={mission.reserved}
-            />
-          ))}
-        </tbody>
-      </table>
+      <main className="overflow-x-auto">
+        <table className="static overflow-scroll table-auto whitespace-no-wrap mx-6">
+          <thead>
+            <tr>
+              <th className="border px-4 py-2">Mission</th>
+              <th className="border  px-4 py-2">Description</th>
+              <th className="border px-4 py-2">Status</th>
+              <th className="border px-4 py-2"> </th>
+            </tr>
+          </thead>
+          <tbody>
+            {missions.map((mission) => (
+              <Mission
+                key={mission.mission_id}
+                missionId={mission.mission_id}
+                missionName={mission.mission_name}
+                description={mission.description}
+                reserved={mission.reserved}
+              />
+            ))}
+          </tbody>
+        </table>
+      </main>
     </>
   );
 };
