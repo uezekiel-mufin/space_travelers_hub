@@ -6,6 +6,7 @@ import Mission from './Mission';
 const Missions = () => {
   const dispatch = useDispatch();
   const { missions } = useSelector((state) => state.missions);
+
   useEffect(() => {
     if (missions.length < 1) {
       dispatch(asyncMission());
