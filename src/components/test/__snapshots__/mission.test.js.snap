@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Missions Snapshot of Missions Component 1`] = `
+<main
+  className="overflow-scroll"
+>
+  <table
+    className="static table-auto mx-6"
+  >
+    <thead>
+      <tr>
+        <th
+          className="border px-4 py-2"
+        >
+          Mission
+        </th>
+        <th
+          className="border px-4 py-2"
+        >
+          Description
+        </th>
+        <th
+          className="border px-4 py-2"
+        >
+          Status
+        </th>
+        <th
+          className="border px-4 py-2"
+        >
+           
+        </th>
+      </tr>
+    </thead>
+    <tbody />
+  </table>
+</main>
+`;

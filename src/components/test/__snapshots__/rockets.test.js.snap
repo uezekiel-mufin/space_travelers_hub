@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Missions Snapshot of Rocket Component 1`] = `
+<main
+  className="pb-10"
+>
+  <section
+    className="px-4 md:px-20 pt-8 space-y-8 md:space-y-4"
+  />
+</main>
+`;

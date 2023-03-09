@@ -1,70 +1,154 @@
-# Getting Started with Create React App
+<a name="readme-top"></a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div>
 
-## Available Scripts
+  <h1><b>Space Traveler's Hub</b></h1><br/><br/>
 
-In the project directory, you can run:
+</div>
 
-### `npm start`
+# 📗 Table of Contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [📖 About the Project](#about-project)
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
+- [💻 Getting Started](#getting-started)
+  - [Setup](#setup)
+  - [Prerequisites](#prerequisites)
+  - [Usage](#usage)
+  - [Deployment](#triangular_flag_on_post-deployment)
+- [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
+- [🙏 Acknowledgements](#acknowledgements)
+- [📝 License](#license)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# 📖 Space Traveler's Hub<a name="about-project"></a>
 
-### `npm test`
+** Space Traveler's Hub **
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+A travel service to space!
 
-### `npm run build`
+## 🛠 Built With <a name="built-with"></a>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Tech Stack <a name="tech-stack"></a>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<summary>Client</summary>
+<ul>
+  <li><a href="https://reactjs.org/">ReactJS</a></li>
+  <li><a href="https://reactrouter.com/en/main">React Router</a></li>
+</ul>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Key Features <a name="key-features"></a>
 
-### `npm run eject`
+- **Reseve and Cancel Rockets and Missions**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+  - The website that displays a list of Rockets/Missions and allows you to add and remove them from your storage.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🚀 Live Demo <a name="live-demo"></a>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+[Live Demo](https://space-travelers-hub-mx3s.onrender.com)
 
-## Learn More
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 💻 Getting Started <a name="getting-started"></a>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+To get a local copy up and running, follow these steps.
 
-### Code Splitting
+### Prerequisites
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+In order to run this project you need:
 
-### Analyzing the Bundle Size
+- A browser (e.g. Firefox)
+- An IDE (e.g. [Visusal Studio Code](https://code.visualstudio.com/download))
+- [npm](https://nodejs.org/en/)
+- Terminal
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Setup
 
-### Making a Progressive Web App
+To clone this repository to your desired folder, follow the steps below:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+**Using the command line**
 
-### Advanced Configuration
+- Use the following commands
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```sh
+  cd my-folder
+  git clone https://github.com/Ezzywealth/space_travelers_hub
+```
+
+**Using GitHub Desktop app**
+
+- Follow the steps below
+
+  - Visit this link "https://github.com/Ezzywealth/space_travelers_hub"
+  - Click the green button labelled "code"
+  - Select the "Open with GitHub Desktop" option
+  - After the GitHub Desktop add opens, click the "clone repo" button
+
+### Usage
+
+To run the project, execute the following command:
+
+**Click the "Go Live" button on your IDE(VS Code in this case)**
 
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+You can deploy this project by:
 
-### `npm run build` fails to minify
+- visiting your repository on [GitHub](https://github.com)
+- Click on settings
+- Go to the "Pages" option
+- Select the main branch and save
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 👥 Authors <a name="authors"></a>
+
+👤 **Ezekiel**
+
+- GitHub: [@Ezzywealth](https://github.com/Ezzywealth)
+- Twitter: [@EzzyWealth](https://twitter.com/EzzyWealth)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/ezekiel-udiomuno)
+
+👤 **Mohi**
+
+- GitHub: [@Ezzywealth](https://github.com/mohisa302)
+- Twitter: [@EzzyWealth](https://twitter.com/Kholochelam)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/mohadese-sadeghi)
+
+## 🔭 Future Features <a name="future-features"></a>
+
+- [ ] **[will improve page elements]**
+- [ ] **[will improve styles]**
+- [ ] **[will improve js functionality]**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🤝 Contributing <a name="contributing"></a>
+
+Contributions, issues, and feature requests are welcome!
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## ⭐️ Show your support <a name="support"></a>
+
+If you like this project, give it a `star` and let me know what you like in particular.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+I would like to thank the whole Microverse community for their help and contributions towards this project.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./LICENSE.md) licensed.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
