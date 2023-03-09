@@ -105,7 +105,13 @@ You can deploy this project by:
 
 - GitHub: [@Ezzywealth](https://github.com/Ezzywealth)
 - Twitter: [@EzzyWealth](https://twitter.com/EzzyWealth)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/ezekiel-udiomuno-b14539150/)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/ezekiel-udiomuno)
+
+👤 **Mohi**
+
+- GitHub: [@Ezzywealth](https://github.com/mohisa302)
+- Twitter: [@EzzyWealth](https://twitter.com/Kholochelam)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/mohadese-sadeghi)
 
 ## 🔭 Future Features <a name="future-features"></a>
 
