@@ -51,7 +51,7 @@ A travel service to space!
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-    [Live Demo](https://space-travelers-hub-mx3s.onrender.com/)
+    [Live Demo](https://space-travelers-hub-mx3s.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
