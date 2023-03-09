@@ -62,18 +62,18 @@ describe('Missions', () => {
   });
 
   it('Click on Leave button', async () => {
-      render(
-        <Provider store={store}>
-          <Missions />
-        </Provider>,
-      );
-  
-      act(() => {
-        const leaveBtn = screen.getAllByText('Leave Mission');
-        leaveBtn[0].click();
-      });
-      const status = await screen.getAllByText('NOT A MEMBER');
-      expect(status).toHaveLength(10);
+    render(
+      <Provider store={store}>
+        <Missions />
+      </Provider>,
+    );
+
+    act(() => {
+      const leaveBtn = screen.getAllByText('Leave Mission');
+      leaveBtn[0].click();
+    });
+    const status = await screen.getAllByText('NOT A MEMBER');
+    expect(status).toHaveLength(10);
   });
 
   it('Click more than one Join button', async () => {
