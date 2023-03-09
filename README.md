@@ -25,7 +25,10 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-# SPace Traveler's Hub<a name="about-project"></a>
+# 📖 Space Traveler's Hub<a name="about-project"></a>
+** Space Traveler's Hub **
+
+A travel service to space!
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -38,6 +41,10 @@
 </ul>
 
 ### Key Features <a name="key-features"></a>
+
+- **Reseve and Cancel Rockets and Missions**
+
+  - The website that displays a list of Rockets/Missions and allows you to add and remove them from your storage.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -115,7 +122,9 @@ You can deploy this project by:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] None at the moment
+- [ ] **[will improve page elements]**
+- [ ] **[will improve styles]**
+- [ ] **[will improve js functionality]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
