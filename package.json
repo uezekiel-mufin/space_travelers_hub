@@ -2,7 +2,6 @@
   "name": "space_travelers_hub",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ezzywealth.github.io/space_travelers_hub",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.3",
     "@tailwindcss/line-clamp": "^0.4.2",
@@ -31,9 +30,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --transformIgnorePatterns \"node_modules/(?!axios)/\"",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -b development -d build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
