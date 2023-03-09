@@ -11,7 +11,6 @@ const Sidebar = ({ links }) => {
   const dispatch = useDispatch();
   const [activeLink, setActiveLink] = useState(1);
   const handleLink = (link, id) => {
-    console.log(link);
     setActiveLink(id);
     dispatch(closeMenu());
   };

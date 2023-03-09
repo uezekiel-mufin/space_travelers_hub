@@ -12,7 +12,6 @@ const Header = () => {
   const location = useLocation();
   const dispatch = useDispatch();
   const menu = useSelector((state) => state.menu.menuBar);
-  // const [mainUrl, setMainUrl] = useState('Rockets');
 
   const navLinks = [
     {
@@ -40,7 +39,6 @@ const Header = () => {
     location.pathname === '/'
       ? '/'
       : location.pathname.split('').slice(1).join('');
-  console.log(activeLink);
   return (
     <header className="w-full border-b mb-4">
       {menu && (
