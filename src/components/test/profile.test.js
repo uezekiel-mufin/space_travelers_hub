@@ -114,7 +114,7 @@ describe('Profile', () => {
         <Missions />
         <MyProfile />
       </Provider>,
-    )
+    );
     const joinBtn = await screen.findAllByText('Join Mission');
     expect(joinBtn).toHaveLength(10);
   });
@@ -172,5 +172,4 @@ describe('Profile', () => {
     const missions = await screen.getByTestId('mission-container');
     expect(missions.childElementCount).toBe(0);
   });
-
 });
