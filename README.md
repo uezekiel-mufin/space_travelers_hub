@@ -51,7 +51,7 @@ A travel service to space!
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-    [Live Demo](https://space-travelers-hub-mx3s.onrender.com)
+[Live Demo](https://space-travelers-hub-mx3s.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -64,7 +64,7 @@ To get a local copy up and running, follow these steps.
 In order to run this project you need:
 
 - A browser (e.g. Firefox)
-- An IDE (e.g. [Vususal Studio Code](https://code.visualstudio.com/download))
+- An IDE (e.g. [Visusal Studio Code](https://code.visualstudio.com/download))
 - [npm](https://nodejs.org/en/)
 - Terminal
 
